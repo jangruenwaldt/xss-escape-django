@@ -42,7 +42,7 @@ def attr_escape(value):
 
 @register.filter(name='js_escape', is_safe=True)
 @stringfilter
-def css_escape(value):
+def js_escape(value):
     return mark_safe(escape_any_non_alphanumeric_below_256_ascii(value))
 
 
