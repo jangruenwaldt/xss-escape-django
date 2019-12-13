@@ -1,0 +1,31 @@
+{% load xss_escape %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<!-- CSS requires special escaping -->
+<style>
+    body {
+        background-color: {{ bg_color | css_escape}};
+    }
+</style>
+<script>
+    {{ js_script | js_escape }}
+</script>
+<body>
+<!-- Attributes require special escaping -->
+<input type="text" name="username" value="{{ username | attr_escape }}" />
+
+<!-- Default Django Escaping is enough for HTML Body -->
+{{ body_context }}
+
+<!-- But OWASP recommends also escaping forward slash -->
+{{ body_context | html_escape }}
+
+<!-- Example JS output -->
+{{ body_context | js_escape }}
+<a href="{{ href_val | url_escape }}"></a>
+</body>
+</html>
