@@ -2,9 +2,8 @@
 
 During my research to compare four modern web frameworks in their security protections, I noticed Django does not provide context-based escaping for XSS protection in templates by default. This is a Proof-of-concept how something like this _could_ look like. However, since this has not been extensively tested and validated, use it at your own risk.
 
-This is a proof-of-concept of how something like this could look like. Similar tools exist for other frameworks,
-such as escape (https://github.com/laravelgems/escape) and blade-escape (https://github.com/laravelgems/blade-escape)
-for Laravel. On the one hand, this is an implementation of the escaping based on important page contexts, and also an
+Similar tools exist for other frameworks, such as escape (https://github.com/laravelgems/escape) and blade-escape (https://github.com/laravelgems/blade-escape) for Laravel. 
+On the one hand, this is an implementation of the escaping based on important page contexts, and also an
 extension to Django's templating system to allow for easy integration of escaping in templates.
 
 The most important files:
