@@ -9,7 +9,7 @@ for Laravel. On the one hand, this is an implementation of the escaping based on
 extension to Django's templating system to allow for easy integration of escaping in templates.
 
 The xss_escape can be added to existing project by doing the following:
-1. Add the "templatetags"-folder if it does not exist. Create an "__init__.py" file inside.
+1. Add the "templatetags"-folder if it does not exist. Create an "\__init__.py" file inside.
 2. Copy xss_escape.py into this folder.
 3. In the setting.py file of the project, add under TEMPLATES -> "libraries" as
 'xss_escape': 'YOUR_APP_NAME.templatetags.xss_escape'
