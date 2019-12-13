@@ -1,7 +1,6 @@
 from django import template
 from django.template.defaultfilters import stringfilter
 from django.utils.html import escape
-import urllib
 
 from django.utils.http import urlencode
 from django.utils.safestring import mark_safe
@@ -16,7 +15,7 @@ def escape_any_non_alphanumeric_below_256_ascii(value):
             output += char
         else:
             if ord(char) < 256:  # ord gets the ascii value
-                output += "&#" + str(ord(char))+";"
+                output += "&#" + str(ord(char)) + ";"
             else:
                 output += char
     return output
