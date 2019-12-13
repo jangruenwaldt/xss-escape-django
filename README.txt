@@ -1,3 +1,5 @@
+# Django XSS Escape in Templates
+
 During my research to compare four modern web frameworks in their security protections, I was unable to find
 a django extension that provides context-based escaping for XSS protection in templates.
 
@@ -8,7 +10,7 @@ extension to Django's templating system to allow for easy integration of escapin
 
 The xss_escape can be added to existing project by doing the following:
 1. Add the "templatetags"-folder if it does not exist. Create an "__init__.py" file inside.
-2. Copy the xss_escape into this folder.
+2. Copy xss_escape.py into this folder.
 3. In the setting.py file of the project, add under TEMPLATES -> "libraries" as
 'xss_escape': 'YOUR_APP_NAME.templatetags.xss_escape'
 
